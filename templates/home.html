@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<style>
+
+table{
+	border-bottom-style: solid;
+	border-bottom-color: #399ab8;
+	border-bottom-width: 4px;
+}
+</style>
+<head>
+	<link rel="stylesheet" href="../static/CSS.css">
+</head>
+<body>
+	<h4 align = 'center'> Welcome to </h4>
+	<div class='secondline'>
+	<p > Konnichiwa </p> 
+	<img src = "../static/JPCafeLogo2.png" width = 200 height = 80 alt = 'Logo'> 
+	<p> <a href = "{{ url_for('signup') }}" >Sign Up  </a> </p> 
+	</div>
+	
+	<form action = "{{url_for('calculate')}}" method='POST'> 
+	<table>
+		<tr>
+			{% for pic in Pic %}
+				<th><img src = "../static/{{pic}}" width= 250 height = 210> </th>
+			{% endfor %}
+			
+		</tr>
+		<tr>
+			{% for name in Name %}
+				<td > {{name}} </td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for price in Price %}
+				<td align='center'> ${{price}} </td>
+			{% endfor %}
+			
+		</tr>
+		<tr>
+			{% for qty in Qty %}
+				<td align='center'> {{qty}} avail </td>
+			{% endfor %}
+	
+		</tr>
+		<tr>
+			<td align='center'> <input type='num' name="amt1"> order </td>
+			<td align='center'> <input type='num' name="amt2"> order </td>
+			<td align='center'> <input type='num' name="amt3"> order </td>
+			<td align='center'> <input type='num' name="amt4"> order </td>
+			<td align='center'> <input type='num' name="amt5"> order </td>
+			<td align='center'> <input type='num' name="amt6"> order </td>
+			<td align='center'> <input type='num' name="amt7"> order </td>
+			<td align='center'> <input type='num' name="amt8"> order </td>
+			<td align='center'> <input type='num' name="amt9"> order </td>
+			<td align='center'> <input type='num' name="amt10"> order </td>
+
+		</tr>
+	</table>
+	<p> Customer name: <input type='text' name='cusname'> <input type='submit' name='action' value='Order as guest'></p>
+	<p> Member email: <input type='text' name='mememail'> Password: <input type='text' name='password'> <input type='submit' name='mem' value='Member login and Order'> </p>
+	
+	</form>
+	
+	
+	
+
+</body>
+
+</html>

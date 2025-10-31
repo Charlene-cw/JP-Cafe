@@ -1,0 +1,15 @@
+.secondline{
+	display: flex;
+}
+
+.secondline p {
+	text-align: left;
+}
+
+.secondline{
+	display: block;
+	margin: auto;
+}
+td{
+	text-align: center;
+}

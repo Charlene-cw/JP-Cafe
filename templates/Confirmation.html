@@ -1,0 +1,35 @@
+<body>
+
+<a href = "{{url_for('home')}}">
+	<img src = '../static/JPCafeLogo2.png' width 200 height=80>
+</a>
+
+<b><h3> Order Confirmation </h3></b>
+
+<p> {{cusname}}, you have ordered: </p>
+<ul> 
+	{% for i in range (length) %}
+		<li> {{iordered[i]}}, ${{pp[i]}}, Qty:{{finalqty[i]}}</li>
+	{%endfor%}
+</ul>
+
+<p> Total ${{total}} </p>
+{% if discount == True%}
+	<p> Discount: 10% </p>
+{% else %}
+	<p> Discount = 0% </p>
+{%endif%}
+
+<p> Total payable ${{totalp}} </p>
+
+<p> Your order is confirmed. </p>
+<p> Please pay the above amount when collecting your food. </p>
+
+<p> Date: 14/3/2023 </p>
+
+
+
+
+
+
+</body>

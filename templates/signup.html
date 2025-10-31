@@ -1,0 +1,11 @@
+<body>
+<p> Welcome to <p>
+<img src = "../static/JPCafeLogo2.png" width = 200 height = 80>  
+
+<h1> Create Account </h1>
+<form action = '{{url_for("register")}}' method='POST'>
+	<p> Name: <input type='text' name='newmemName'> </p>
+	<p> Email: <input type='text' name='newmemEmail'> </p>
+	<p> Password: <input type='text' name='newmemPassword'> </p>
+	<input type='submit'>
+</form>

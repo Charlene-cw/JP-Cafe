@@ -27,7 +27,6 @@ def read_data():
             
     return ItemID, Name, Desc, Price, Qty, Pic
     
-    
 #Home function
 @app.route('/', methods = ['GET', 'POST'])
 def home():
@@ -118,14 +117,9 @@ def calculate():
             file.write(',' + str(iordered[i]) + ',' + str(finalqty[i]))
         file.write('\n')
         
-    
     return render_template('Confirmation.html', iordered = iordered, finalqty = finalqty, total=total, totalp=totalp, cusname=cusname, length=length, pp=pp, discount=discount, itemID=itemID)
-     
-    
-    
-    
-
 
 if __name__=='__main__':
     app.run(port =2345)
         
+

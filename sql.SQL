@@ -32,11 +32,3 @@ CREATE TABLE 'ItemOrdered' (
     FOREIGN KEY('OrderID') REFERENCES 'Order'('OrderID'),
     FOREIGN KEY('ItemID') REFERENCES 'Inventory'('ItemID')
 );
-
-
-
-    
-
-
-
-    
